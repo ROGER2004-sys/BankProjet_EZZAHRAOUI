@@ -1,5 +1,6 @@
 package org.sid.bank_account_service.web;
 
+import jakarta.transaction.Transactional;
 import org.sid.bank_account_service.DTO.BankAccountRequestDTO;
 import org.sid.bank_account_service.DTO.BankAccountResponseDTO;
 import org.sid.bank_account_service.service.AccountService;

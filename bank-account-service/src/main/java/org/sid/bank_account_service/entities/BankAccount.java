@@ -1,9 +1,7 @@
 package org.sid.bank_account_service.entities;
 import java.util.Date;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.Id;
+
+import jakarta.persistence.*;
 import lombok.*;
 import org.sid.bank_account_service.enums.AccountType;
 @Entity
@@ -19,5 +17,6 @@ public class BankAccount {
     private String currency;
     @Enumerated(EnumType.STRING)
     private AccountType type;
-
+    @ManyToOne(fetch = FetchType.EAGER)
+    private Customer customer;
 }
